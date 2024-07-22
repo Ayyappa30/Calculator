@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(222, 26%, 31%);
+  font-family: "League Spartan";
+  font-weight: 700;
+  outline: none; /*border ouline*/
+
+  @media (min-width: 375px) (max-width: 1440px) {
+    body {
+      width: 50%;
+      float: both;
+      padding: 10px;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
+  margin-top: 21%;
+}
+.calculator {
+  background-color: hsl(223, 31%, 20%);
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+  grid-column-gap: 40px;
+  width: 463px;
+  font-family: "League Spartan";
+  margin-top: -500px;
+  margin-bottom: 100px;
+  height: 70vh;
+}
+
+input {
+  font-family: "League Spartan", sans-serif;
+  grid-column: span 4;
+  height: 35px;
+  width: 430px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-size: 32px;
+  text-align: end;
+  margin-top: 0px;
+  margin-bottom: 600px;
+  padding: 30px;
+  font-family: "League Spartan";
+}
+button {
+  font-family: "League Spartan", sans-serif;
+  height: 48px;
+  width: 100px;
+  background-color: hsl(30, 25%, 89%); /*hue,saturation,lightness*/
+  border: none;
+  border-radius: 10%;
+  margin: 15px;
+  font-size: 32px;
+  padding: 10px;
+  color: hsl(221, 14%, 31%);
+  margin-left: 15px;
+  font-family: "League Spartan";
+}
+.equal {
+  font-family: "League Spartan", sans-serif;
+  width: 210px;
+  border-radius: 10%;
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  grid-column: 3/4;
+  grid-column-gap: 10px;
+  font-family: "League Spartan";
+}
+.reset {
+  font-family: "League Spartan", sans-serif;
+  width: 210px;
+  border-radius: 10%;
+  background-color: hsl(225, 21%, 49%);
+  grid-column: 1/2;
+  color: hsl(0, 0%, 100%);
+  grid-column-gap: 10px;
+  font-family: "League Spartan";
+}
+.del {
+  font-family: "League Spartan", sans-serif;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  width: 100px;
+  font-family: "League Spartan";
+}
+.placeholder {
+  font-family: "League Spartan", sans-serif;
+  height: 0vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
+  margin-top: 400px;
+  font-family: "League Spartan";
+}
+
+.redButton.horizTranslate2 {
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(20px);
+}
+.redButton.horizTranslate3 {
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(40px);
+}
+.redButton.horizTranslate1 {
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transform: translateX(0px);
+}
+
+#outerContainer {
+  font-family: "League Spartan", sans-serif;
+  position: relative;
+  width: 80px;
+  height: 50px;
+  background-color: hsl(222, 26%, 31%);
+  margin-left: 785px;
+  margin-top: -65px;
+  margin-bottom: -20px;
+}
+#buttonContainer {
+  font-family: "League Spartan", sans-serif;
+  background-color: hsl(224, 36%, 15%);
+  width: 71px;
+  height: 28px;
+  position: relative;
+  left: 20px;
+  top: 45px;
+  border-radius: 14px;
+  /* margin-left: 100px; */
+}
+.redButton {
+  width: 16px;
+  height: 16px;
+  background-color: #db3d2b;
+  border-radius: 8px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+#legendTextContainer {
+  left: 22px;
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+  font-size: 10pt;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
+  margin-top: -50px;
+}
+.legendText {
+  display: inline-block; /*inline-block to display them horizontally */
+  width: 15px;
+  padding-bottom: 3px;
+  cursor: default;
+  user-select: none;
+}
+.theme {
+  font-family: "League Spartan", sans-serif;
+  margin-left: 750px;
+  margin-top: 170px;
+  margin-bottom: -80px;
+  color: hsl(0, 0%, 100%);
+  font-family: League Spartan;
+}
+.calc {
+  font-family: "League Spartan", sans-serif;
+  margin-left: 390px;
+  margin-top: 90px;
+  margin-bottom: -185px;
+  color: hsl(0, 0%, 100%);
+}

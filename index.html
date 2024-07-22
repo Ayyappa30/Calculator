@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online_Calculator</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body id="id1">
+    <div class="calc" id="calc"><h4>calc</h4></div>
+    <div class="theme"><h6>THEME</h6></div>
+
+    <div id="outerContainer">
+      <div id="buttonContainer">
+        <div class="redButton"></div>
+      </div>
+
+      <div id="legendTextContainer">
+        <div> <button onclick="go_to_1()" class="legendText" id="1">1 </div>
+          <div> <button onclick="go_to_2()" class="legendText" id="2">2 </div>
+            <div> <button onclick="go_to_3()" class="legendText" id="3">3 </div>
+      </div>
+      <script>
+        let toggleSwitch = document.getElementsByClassName("redButton")[0];
+  
+        function go_to_1() {
+          toggleSwitch.classList.add("horizTranslate1");
+          toggleSwitch.classList.remove("horizTranslate2");
+          toggleSwitch.classList.remove("horizTranslate3");
+          document.getElementById("id1").style.backgroundColor =
+            "hsl(222, 26%, 31%)";
+          document.getElementsByClassName("calculator").style.backgroundColor =
+            "#222D41";
+            document.getElementById("outerContainer").style.backgroundColor = "#4A5B7E"
+            document.getElementById("buttonContainer").style.backgroundColor = "#222D41"
+            document.getElementById("legendTextContainer").style.color = "#ffffff"
+          doStuff(1);
+        }
+  
+        function go_to_2() {
+          toggleSwitch.classList.add("horizTranslate2");
+          toggleSwitch.classList.remove("horizTranslate1");
+          toggleSwitch.classList.remove("horizTranslate3");
+          document.getElementById("id1").style.backgroundColor =
+            "hsl(0, 0%, 90%)";
+          document.getElementsByClassName("calculator").style.backgroundColor =
+            "hsl(0, 5%, 81%)";
+          document.getElementsByClassName("calc").style.color = "hsl(60, 10%, 19%)";
+          document.getElementById("outerContainer").style.backgroundColor = "hsl(0, 0%, 90%)"
+            document.getElementById("buttonContainer").style.backgroundColor = " hsl(25, 98%, 40%)"
+            document.getElementById("legendTextContainer").style.color = "hsl(60, 10%, 19%) "
+          doStuff(2);
+        }
+  
+        function go_to_3() {
+          toggleSwitch.classList.add("horizTranslate3");
+          toggleSwitch.classList.remove("horizTranslate1");
+          toggleSwitch.classList.remove("horizTranslate2");
+          document.getElementById("id1").style.backgroundColor =
+            "hsl(268, 75%, 9%)";
+          document.getElementById("id2").style.backgroundColor =
+            "hsl(268, 47%, 21%)";
+            document.getElementById("outerContainer").style.backgroundColor = "hsl(268, 75%, 9%)"
+            document.getElementById("buttonContainer").style.backgroundColor = "#444444"
+            document.getElementById("legendTextContainer").style.color = "#E2D241"
+          doStuff(3);
+        }
+      </script>   
+    </div>
+    
+   
+
+    <div class="placeholder">
+      <input type="text" placeholder="0" id="input" />
+    </div>
+    
+    <div class="container" >
+      <div class="calculator" id="id2">
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+        <button onclick="del()" class="del">DEL</button>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('+')">+</button>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('-')">-</button>
+        <button onclick="display('.')">.</button>
+        <button onclick="display('0')">0</button>
+        <button onclick="display('/')">/</button>
+        <button onclick="display('*')">*</button>
+        <button onclick="clear()" class="reset" id="reset">RESET</button>
+        <button onclick="calculate()" class="equal">=</button>
+      </div>
+    </div>
+
+    <script>
+      let result = document.getElementById("input");
+
+      function display(num) {
+        result.value += num;
+      }
+
+      function calculate() {
+        try {
+          input.value = eval(input.value);
+        } catch (err) {
+          alert("Invalid Operation");
+        }
+      }
+
+      function clear() {
+        clear();
+      }
+      function del() {
+        result.value = result.value.slice(0, -1);
+      }
+    </script>
+  </body>
+</html>
